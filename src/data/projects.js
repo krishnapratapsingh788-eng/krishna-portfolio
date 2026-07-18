@@ -10,7 +10,8 @@ export const projects = [
     ],
     github:
       "https://github.com/krishnapratapsingh788-eng",
-    demo: "#",
+    demo:
+      "https://foodspends.lovable.app/",
     image: "/projects/foodspend.png",
   },
 
@@ -41,7 +42,8 @@ export const projects = [
     ],
     github:
       "https://github.com/krishnapratapsingh788-eng",
-    demo: "#",
+    demo:
+      "https://dsa-visualizationn.netlify.app/",
     image: "/projects/dsa.png",
   },
 ];
