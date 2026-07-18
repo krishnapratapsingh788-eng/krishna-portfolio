@@ -44,7 +44,7 @@ export const projects = [
     github:
       "https://github.com/krishnapratapsingh788-eng/muit-attandance",
     demo:
-      "https://muit-attandance.vercel.app/login",
+      "https://muit-attandance.vercel.app/login,
     image: "/projects/muit-attendance.png",
   },
 
