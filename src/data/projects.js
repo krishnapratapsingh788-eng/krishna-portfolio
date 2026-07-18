@@ -32,9 +32,26 @@ export const projects = [
   },
 
   {
+    title: "MUIT Attendance System",
+    description:
+      "A modern attendance management system built for Maharishi University of Information Technology (MUIT) with a responsive dashboard and user-friendly interface.",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "JavaScript",
+    ],
+    github:
+      "https://github.com/krishnapratapsingh788-eng/muit-attandance",
+    demo:
+      "https://muit-attandance.vercel.app/login",
+    image: "/projects/muit-attendance.png",
+  },
+
+  {
     title: "DSA Visualizer",
     description:
-      "Interactive visualization platform for sorting and data structures.",
+      "Interactive visualization platform for sorting algorithms and data structures.",
     tech: [
       "React",
       "JavaScript",
