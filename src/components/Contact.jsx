@@ -10,9 +10,7 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
-
   const form = useRef();
-
   const [status, setStatus] = useState("");
 
   const sendEmail = (e) => {
@@ -38,12 +36,10 @@ function Contact() {
       );
   };
 
-
   return (
     <section id="contact" className="bg-slate-900 py-20 px-6">
-
       <div className="max-w-6xl mx-auto">
-
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,169 +51,125 @@ function Contact() {
           </h2>
 
           <p className="text-gray-400 mt-4">
-            Feel free to connect with me for internships, collaborations, or projects.
+            Feel free to connect with me for internships, collaborations, freelance work, or exciting AI projects.
           </p>
         </motion.div>
 
-
         <div className="grid md:grid-cols-2 gap-10">
-
-
           {/* Contact Info */}
           <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-
-
+            {/* Email */}
             <div className="flex items-center gap-4 mb-6">
               <FaEnvelope className="text-blue-500 text-2xl" />
               <div>
-                <h3 className="text-white font-semibold">
-                  Email
-                </h3>
-                <p className="text-gray-400">
-                  your-email@gmail.com
-                </p>
+                <h3 className="text-white font-semibold">Email</h3>
+
+                <a
+                  href="mailto:krishnapratapsingh788@gmail.com"
+                  className="text-gray-400 hover:text-blue-400 transition"
+                >
+                  krishnapratapsingh788@gmail.com
+                </a>
               </div>
             </div>
 
-
+            {/* GitHub */}
             <div className="flex items-center gap-4 mb-6">
               <FaGithub className="text-blue-500 text-2xl" />
+
               <div>
-                <h3 className="text-white font-semibold">
-                  GitHub
-                </h3>
+                <h3 className="text-white font-semibold">GitHub</h3>
 
                 <a
                   href="https://github.com/krishnapratapsingh788-eng"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-400 hover:text-blue-400"
+                  className="text-gray-400 hover:text-blue-400 transition"
                 >
-                  krishnapratapsingh788-eng
+                  github.com/krishnapratapsingh788-eng
                 </a>
-
               </div>
             </div>
 
-
-
+            {/* LinkedIn */}
             <div className="flex items-center gap-4 mb-6">
-
               <FaLinkedin className="text-blue-500 text-2xl" />
 
               <div>
-                <h3 className="text-white font-semibold">
-                  LinkedIn
-                </h3>
+                <h3 className="text-white font-semibold">LinkedIn</h3>
 
                 <a
                   href="https://www.linkedin.com/in/krishna-pratap-singh-189339383/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-gray-400 hover:text-blue-400"
+                  className="text-gray-400 hover:text-blue-400 transition"
                 >
                   Krishna Pratap Singh
                 </a>
-
               </div>
-
             </div>
 
-
-
+            {/* Location */}
             <div className="flex items-center gap-4">
-
               <FaMapMarkerAlt className="text-blue-500 text-2xl" />
 
               <div>
-                <h3 className="text-white font-semibold">
-                  Location
-                </h3>
+                <h3 className="text-white font-semibold">Location</h3>
 
                 <p className="text-gray-400">
                   Lucknow, Uttar Pradesh, India
                 </p>
-
               </div>
-
             </div>
-
-
           </div>
 
-
-
-          {/* Form */}
-
+          {/* Contact Form */}
           <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-
-
             <form
               ref={form}
               onSubmit={sendEmail}
               className="space-y-5"
             >
-
-
               <input
                 type="text"
                 name="from_name"
                 placeholder="Your Name"
                 required
-                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none"
+                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none border border-slate-700 focus:border-blue-500"
               />
-
-
 
               <input
                 type="email"
                 name="from_email"
                 placeholder="Your Email"
                 required
-                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none"
+                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none border border-slate-700 focus:border-blue-500"
               />
-
-
 
               <textarea
                 name="message"
                 rows="6"
                 placeholder="Your Message"
                 required
-                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none"
+                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none border border-slate-700 focus:border-blue-500"
               ></textarea>
-
-
 
               <button
                 type="submit"
-                className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-xl font-semibold transition"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-semibold transition"
               >
-                Send Message
+                Send Message 🚀
               </button>
 
-
-              {
-                status && (
-                  <p className="text-blue-400 mt-3">
-                    {status}
-                  </p>
-                )
-              }
-
-
+              {status && (
+                <p className="text-center text-blue-400 font-medium">
+                  {status}
+                </p>
+              )}
             </form>
-
-
           </div>
-
-
         </div>
-
-
       </div>
-
-
     </section>
   );
 }
