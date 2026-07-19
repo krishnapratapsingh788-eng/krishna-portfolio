@@ -39,6 +39,7 @@ function Contact() {
   return (
     <section id="contact" className="bg-slate-900 py-20 px-6">
       <div className="max-w-6xl mx-auto">
+
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -51,16 +52,20 @@ function Contact() {
           </h2>
 
           <p className="text-gray-400 mt-4">
-            Feel free to connect with me for internships, collaborations, freelance work, or exciting AI projects.
+            Feel free to connect with me for internships, collaborations,
+            freelance work, or exciting AI projects.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10">
+
           {/* Contact Info */}
           <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+
             {/* Email */}
             <div className="flex items-center gap-4 mb-6">
               <FaEnvelope className="text-blue-500 text-2xl" />
+
               <div>
                 <h3 className="text-white font-semibold">Email</h3>
 
@@ -109,6 +114,30 @@ function Contact() {
               </div>
             </div>
 
+            {/* Google Skills Profile */}
+            <div className="flex items-center gap-4 mb-6">
+              <img
+                src="/icons/google-skills.png"
+                alt="Google Skills"
+                className="w-10 h-10 object-contain rounded-md"
+              />
+
+              <div>
+                <h3 className="text-white font-semibold">
+                  Google Skills Profile
+                </h3>
+
+                <a
+                  href="https://www.skills.google/public_profiles/f47697cf-6455-40dd-8f62-4dc75d22a0e8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition font-medium"
+                >
+                  View My Google Skills Profile →
+                </a>
+              </div>
+            </div>
+
             {/* Location */}
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-blue-500 text-2xl" />
@@ -121,21 +150,24 @@ function Contact() {
                 </p>
               </div>
             </div>
+
           </div>
 
           {/* Contact Form */}
           <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+
             <form
               ref={form}
               onSubmit={sendEmail}
               className="space-y-5"
             >
+
               <input
                 type="text"
                 name="from_name"
                 placeholder="Your Name"
                 required
-                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none border border-slate-700 focus:border-blue-500"
+                className="w-full p-4 rounded-xl bg-slate-900 text-white border border-slate-700 outline-none focus:border-blue-500"
               />
 
               <input
@@ -143,7 +175,7 @@ function Contact() {
                 name="from_email"
                 placeholder="Your Email"
                 required
-                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none border border-slate-700 focus:border-blue-500"
+                className="w-full p-4 rounded-xl bg-slate-900 text-white border border-slate-700 outline-none focus:border-blue-500"
               />
 
               <textarea
@@ -151,7 +183,7 @@ function Contact() {
                 rows="6"
                 placeholder="Your Message"
                 required
-                className="w-full p-4 rounded-xl bg-slate-900 text-white outline-none border border-slate-700 focus:border-blue-500"
+                className="w-full p-4 rounded-xl bg-slate-900 text-white border border-slate-700 outline-none focus:border-blue-500"
               ></textarea>
 
               <button
@@ -166,9 +198,13 @@ function Contact() {
                   {status}
                 </p>
               )}
+
             </form>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );
